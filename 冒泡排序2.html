@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 数组的三种创建方法
+        // 1用构造函数的方法声明数组，只声明不赋值，2用构造函数的方法声明数组并且赋值。3用字面量的方法声明数组
+        // 1 var arr=new Array() arr[1]=1;       2  var arr=new Array(1,2,3,4,5);  3 var arr=[1,2,3,4,5]
+
+
+        /*
+            开始做javascript方法实现冒泡排序
+
+        
+        
+        
+        */
+
+        // 第一步新建一个数组
+        var arr=new Array(1,32,123,425,12,46);
+
+        // 一共俩层循环 一个是外部的循环，确定循环的次数。二是内部的循环，用来控制？？？？
+       function  bubble(arr) {
+        for (let i = 0; i < arr.length-1; i++) {
+            for (let j = 0; j < arr.length-1-i; j++) {
+                var demp=null;
+                if (arr[j]>arr[j+1]) {
+                    demp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=demp;
+                }
+            }
+        }
+            return arr;
+        }
+        arr=bubble(arr);
+        document.write(arr)
+    </script>
+
+
+
+
+</body>
+</html>
